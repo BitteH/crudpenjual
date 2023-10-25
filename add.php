@@ -15,7 +15,7 @@
             </tr>
             <tr> 
                 <td>Alamat</td>
-                <td><input type="text" name="Alamat"></td>
+                <td><input type="text" name="alamat"></td>
             </tr>
             <tr> 
                 <td>No_hp</td>
@@ -32,15 +32,15 @@
  
     // Check If form submitted, insert form data into users table.
     if(isset($_POST['Submit'])) {
-        $name = $_POST['nama'];
-        $Alamat = $_POST['Alamat'];
+        $nama = $_POST['nama'];
+        $alamat = $_POST['alamat'];
         $no_hp = $_POST['no_hp'];
         
         // include database connection file
         include_once("config.php");
                 
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO penjual(nama,Alamat,no_hp) VALUES('$name','$Alamat','$no_hp')");
+        $result = mysqli_query($mysqli, "INSERT INTO penjual(nama,alamat,no_hp) VALUES('$nama','$alamat','$no_hp')");
         
         // Show message when user added
         echo "Penjual sukses ditambahkan. <a href='index.php'>Tampilkan Penjual</a>";

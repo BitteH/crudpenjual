@@ -8,11 +8,11 @@ if(isset($_POST['update']))
 {	
     $id_penjual = $_POST['id_penjual'];   
     $nama=$_POST['nama'];
-    $Alamat=$_POST['Alamat'];
+    $Alamat=$_POST['alamat'];
     $no_hp=$_POST['no_hp'];
         
     // update user data
-    $result = mysqli_query($mysqli, "UPDATE penjual SET id_penjual='$id_penjual' nama='$nama',Alamat='$Alamat',no_hp='$no_hp' WHERE id_penjual=$id_penjual");
+    $result = mysqli_query($mysqli, "UPDATE penjual SET id_penjual='$id_penjual' nama='$nama',alamat='$alamat',no_hp='$no_hp' WHERE id_penjual=$id_penjual");
     
     // Redirect to homepage to display updated user in list
     header("Location: index.php");
@@ -30,7 +30,7 @@ while($user_data = mysqli_fetch_array($result))
 {   
     $id_penjual = $user_data['id_penjual'];
     $nama = $user_data['nama'];
-    $Alamat = $user_data['Alamat'];
+    $Alamat = $user_data['alamat'];
     $no_hp = $user_data['no_hp'];
 }
 ?>
@@ -56,7 +56,7 @@ while($user_data = mysqli_fetch_array($result))
             </tr>
             <tr> 
                 <td>Alamat</td>
-                <td><input type="text" name="Alamat" value=<?php echo $Alamat;?>></td>
+                <td><input type="text" name="alamat" value=<?php echo $Alamat;?>></td>
             </tr>
             <tr> 
                 <td>No_hp</td>

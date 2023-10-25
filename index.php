@@ -24,7 +24,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_penjual DESC"
         echo "<tr>";
         echo "<td>".$user_data['id_penjual']."</td>";
         echo "<td>".$user_data['nama']."</td>";
-        echo "<td>".$user_data['Alamat']."</td>";
+        echo "<td>".$user_data['alamat']."</td>";
         echo "<td>".$user_data['no_hp']."</td>";       
         echo "<td><a href='edit.php?id_penjual=$user_data[id_penjual]'>Edit</a> | <a href='delete.php?id_penjual=$user_data[id_penjual]'>Delete</a></td></tr>";        
     }
