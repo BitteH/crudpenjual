@@ -3,7 +3,7 @@
 include_once("config.php");
  
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_penjual DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_p DESC");
 ?>
  
 <html>
@@ -22,11 +22,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_penjual DESC"
     <?php  
     while($user_data = mysqli_fetch_array($result)) {         
         echo "<tr>";
-        echo "<td>".$user_data['id_penjual']."</td>";
-        echo "<td>".$user_data['nama']."</td>";
+        echo "<td>".$user_data['id_p']."</td>";
+        echo "<td>".$user_data['nama_p']."</td>";
         echo "<td>".$user_data['alamat']."</td>";
         echo "<td>".$user_data['no_hp']."</td>";       
-        echo "<td><a href='edit.php?id_penjual=$user_data[id_penjual]'>Edit</a> | <a href='delete.php?id_penjual=$user_data[id_penjual]'>Delete</a></td></tr>";        
+        echo "<td><a href='edit.php?id_p=$user_data[id_p]'>Edit</a> | <a href='delete.php?id_p=$user_data[id_p]'>Delete</a></td></tr>";        
     }
     ?>
     </table>
